@@ -1,5 +1,6 @@
 package com.kai.controller;
 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,7 +14,7 @@ import reactor.core.publisher.Mono;
 @RequestMapping("/mono")
 public class OneController {
 
-	@RequestMapping("/getlook")
+	@GetMapping("/look")
 	public Mono<String> getHelloWord(){
 		return Mono.just("this is look");
 	}
